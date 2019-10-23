@@ -23,7 +23,10 @@ int main(int argc, char const *argv[])
         }
 
         cv::Mat out_image;
+        std::cout << "Processing..." << std::endl;
         docs_processing::enhance_doc_image(image, out_image);
+        std::cout << "Done" << std::endl;
+
         imwrite(argv[2], out_image);
         return 0;
     }
