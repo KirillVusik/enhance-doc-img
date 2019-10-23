@@ -1,11 +1,11 @@
-#ifndef MAKE_BITONAL_H
-#define MAKE_BITONAL_H
+#ifndef ENHANCE_DOC_H
+#define ENHANCE_DOC_H
 
 #include <cstdint>
 
 #include <opencv2/core/core.hpp>
 
-#include "makebitonal_export.h"
+#include "enhance_doc/enhance_doc_export.h"
 
 namespace docs_processing
 {
@@ -17,8 +17,8 @@ namespace docs_processing
  * @param dst Result image
  * @return 0 in case of success or error code 
  */
-int MAKEBITONAL_EXPORT enhance_doc_image(cv::InputArray src, cv::OutputArray dst);
+int ENHANCE_DOC_EXPORT enhance_doc_image(cv::InputArray src, cv::OutputArray dst);
 
 }
 
-#endif // MAKE_BITONAL_H
+#endif // ENHANCE_DOC_H

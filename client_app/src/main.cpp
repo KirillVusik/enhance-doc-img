@@ -3,7 +3,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgcodecs.hpp>
 
-#include "make_bitonal.h"
+#include "enhance_doc/enhance_doc.h"
 
 int main(int argc, char const *argv[])
 {

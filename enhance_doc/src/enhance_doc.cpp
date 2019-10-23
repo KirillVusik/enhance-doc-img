@@ -1,4 +1,4 @@
-#include "make_bitonal.h"
+#include "enhance_doc/enhance_doc.h"
 
 #include <opencv2/opencv.hpp>
 
