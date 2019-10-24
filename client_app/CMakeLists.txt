@@ -20,3 +20,13 @@ set(${PROJECT_NAME}_SOURCES ${PROJECT_SOURCE_DIR}/src/main.cpp)
 add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_SOURCES})
 
 target_link_libraries(${PROJECT_NAME} enhance_doc)
+
+if (WIN32)
+# Workaround to avoid dealing with install()
+# copy the .dll file to the same folder as the executable
+add_custom_command(
+    TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    $<TARGET_FILE_DIR:enhance_doc>
+    $<TARGET_FILE_DIR:${PROJECT_NAME}>)
+endif()
