@@ -44,7 +44,7 @@ void remove_dotted_text_background(InputArray input_image, OutputArray output_im
     {
         if (stats.at<int>(i, stats_size_index) >= min_connected_component_size)
         {
-            for (int j = 0; j < imageWithoutDots.total(); j++) 
+            for (size_t j = 0; j < imageWithoutDots.total(); j++) 
             {
                 if (labels.at<int>(j) == i) 
                 {
